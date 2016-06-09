@@ -22,10 +22,10 @@ class AddViewController: UIViewController {
         if saveData.arrayForKey("WORD") != nil{
             wordArray = saveData.arrayForKey("WORD")!
         }
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -33,7 +33,7 @@ class AddViewController: UIViewController {
     
     @IBAction func saveWord() {
         let wordDictionary =
-            ["english":englishTextField.text,"japanese":japaneseTextField.text]
+            ["english":englishTextField.text!,"japanese":japaneseTextField.text!]
         
         wordArray.append(wordDictionary)
         saveData.setObject(wordArray, forKey: "WORD")
@@ -54,10 +54,10 @@ class AddViewController: UIViewController {
         japaneseTextField.text = ""
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
+     // MARK: - Navigation
+     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.

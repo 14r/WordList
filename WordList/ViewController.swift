@@ -33,10 +33,8 @@ class ViewController: UIViewController {
         let saveData = NSUserDefaults.standardUserDefaults()
         if let wordArray = saveData.arrayForKey("WORD"){
             if wordArray.count > 0 {
-                
-                
-                
-                self.performSegueWithIdentifier("toQuetionView", sender: nil)
+             
+                self.performSegueWithIdentifier("toQuestionView", sender: nil)
                 return
             }
         }
@@ -54,6 +52,7 @@ class ViewController: UIViewController {
             handler: nil
             )
         )
+      
         self.presentViewController(alert, animated: true, completion: nil)
         
     }

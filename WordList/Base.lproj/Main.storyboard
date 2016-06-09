@@ -25,7 +25,7 @@
                                 </state>
                                 <connections>
                                     <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EmK-1V-Ftn"/>
-                                    <segue destination="MzO-C9-aIG" kind="modal" id="EEA-Vl-4ef"/>
+                                    <segue destination="MzO-C9-aIG" kind="modal" id="fLM-b8-Pfz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rbu-Lh-e36">
@@ -43,7 +43,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="mBO-xc-UCU" kind="modal" identifier="toQuestionView" id="Je4-ce-Von"/>
+                        <segue destination="mBO-xc-UCU" kind="modal" identifier="toQuestionView" id="f9G-EL-Ez7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -80,18 +80,18 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextButtonPushed" destination="mBO-xc-UCU" eventType="touchUpInside" id="ZRF-PD-01N"/>
+                                    <action selector="nextButtonPushed" destination="mBO-xc-UCU" eventType="touchUpInside" id="wBp-7h-wkz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PBV-w0-IGi">
-                                <rect key="frame" x="166" y="444" width="42" height="21"/>
+                                <rect key="frame" x="81" y="444" width="199" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LAs-B1-a51">
-                                <rect key="frame" x="159" y="240" width="42" height="21"/>
+                                <rect key="frame" x="88" y="240" width="183" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -103,6 +103,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="answerLabel" destination="PBV-w0-IGi" id="N1N-9E-DW3"/>
+                        <outlet property="nextButton" destination="R6d-G6-SWv" id="OSe-xJ-mBg"/>
                         <outlet property="questionLabel" destination="LAs-B1-a51" id="xKG-KY-gCR"/>
                         <segue destination="68X-l5-4WH" kind="modal" identifier="toFinishView" id="7nz-tV-RdF"/>
                     </connections>
@@ -127,6 +128,9 @@
                                 <rect key="frame" x="74" y="405" width="226" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="トップにもどる"/>
+                                <connections>
+                                    <segue destination="59a-lS-Sph" kind="unwind" unwindAction="back:" id="wic-aP-367"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -137,6 +141,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AgK-te-LKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="59a-lS-Sph" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="975.5" y="295.5"/>
         </scene>
@@ -164,7 +169,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="一覧" id="mkX-LF-au4">
-                        <barButtonItem key="leftBarButtonItem" title="もどる" id="8Ul-bH-vna"/>
+                        <barButtonItem key="leftBarButtonItem" title="もどる" id="8Ul-bH-vna">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="modal" id="1rx-9W-tpR"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="esS-wH-Duu">
                             <connections>
                                 <segue destination="V4Z-1s-hCl" kind="push" id="SnW-Jq-XGK"/>
@@ -229,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BQ5-Mf-raG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="953.5" y="1065.5"/>
+            <point key="canvasLocation" x="969.5" y="1065.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hDq-0C-5kp">
