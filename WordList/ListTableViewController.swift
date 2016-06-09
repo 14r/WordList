@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListTableViewController: UIViewController {
+class ListTableViewController: UITableViewController {
     
     var wordArray: [AnyObject] = []
     let saveData = NSUserDefaults.standardUserDefaults()
@@ -17,8 +17,7 @@ class ListTableViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.registerNib(UINib(nibName: "ListTableViewCell", bundle: nil),
-                              foeCellReuseIdentifier: "cell")
-
+                              forCellReuseIdentifier: "cell")
         // Do any additional setup after loading the view.
     }
     
