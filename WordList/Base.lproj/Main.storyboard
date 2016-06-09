@@ -148,7 +148,7 @@
         <!--一覧-->
         <scene sceneID="DbV-2b-Pqg">
             <objects>
-                <tableViewController id="3tJ-Pu-Z5x" sceneMemberID="viewController">
+                <tableViewController id="3tJ-Pu-Z5x" customClass="ListTableViewController" customModule="WordList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="D8o-YA-Drn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
